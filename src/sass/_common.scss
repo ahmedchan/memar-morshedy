@@ -1,0 +1,80 @@
+// common here
+body {
+	font-family:$primaryFont;
+	font-weight:$fontSemiLight;
+	line-height:$baseLineHeight;
+	font-size:$baseFontSize;
+	color: $textColor;
+	
+	&.fixed-sidebar {
+		//overflow:hidden;
+	}
+}
+
+ul, li, ol {
+	margin:0; padding:0; list-style:none;
+}
+
+
+/////////// forms
+.form-control,
+select.form-control,
+textarea.form-control {
+	@include border-radius(0);
+	box-shadow:none;
+	height:42px;
+	background-color:#FFFFFF;
+	border-color:#999999;
+	font-size:$baseFontSize;
+
+	&:focus {
+		border-color:$primaryColor;
+		box-shadow:none;
+	}
+}
+textarea.form-control {
+	height:120px;
+	resize:none;
+}
+
+
+////////////// btn
+.btn {
+	border-radius:0;
+	padding:10px 14px;
+	border:1px solid transparent;
+	-moz-font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	font-weight:$fontMedium;
+
+	&.btn-wide {
+		padding-right:28px;
+		padding-left:28px;
+	}
+}
+.btn-primary {
+	background-color:$accentColor;
+	border-color:$accentColor;
+	color:#FFFFFF;
+	
+	&:hover, &.active, &:focus, &:active {
+		background-color:transparent;
+		color: $accentColor;
+		border-color:$accentColor;
+	}
+
+	&.btn-reverse {
+		background-color:#FFFFFF;
+		border-color:$accentColor;
+		color:$accentColor;
+	
+		&:hover, &.active, &:focus, &:active {
+			background-color:$accentColor;
+			color: #FFFFFF;
+			border-color:$accentColor;
+		}
+	}
+}
+
+
